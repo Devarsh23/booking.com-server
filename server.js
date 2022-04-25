@@ -3,7 +3,9 @@ import * as tuitDao from "./controller/tuits/tuits-dao.js"
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import dealsController from "./controller/deals-controller.js";
 import tuitsController from "./controller/tuits-controller.js";
+import airlinesController from "./controller/airlines-controller.js";
 //const DB_CONNECTION_STRING = "mongodb+srv://devarsh23:hello123@cluster0.pxmhw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
     || 'mongodb://localhost:27017/webdev'
@@ -18,5 +20,7 @@ app.use(cors());
 app.get('/', (req, res) => {res.send('Welcome to Full Stack Development!')})
 app.use(express.json());
 tuitsController(app);
+dealsController(app);
+airlinesController(app);
 app.listen(process.env.PORT || 4000);
 

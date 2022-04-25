@@ -7,7 +7,9 @@ const tuitsController = (app) => {
     app.get('/api/tuits', findAllTuits);
     app.put('/api/tuits/:tid', updateTuit);
     app.delete('/api/tuits/:tid', deleteTuit);
+
 }
+
 
 const createTuit = async (req, res) => {
     const newTuit = req.body;
