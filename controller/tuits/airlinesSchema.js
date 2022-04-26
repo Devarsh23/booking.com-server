@@ -3,12 +3,12 @@ const schema = mongoose.Schema({
     legs:
         {
             origin: {
-                name: String,
-                displayCode: String
+                originName: String,
+                originCode: String
             },
             destination: {
-                name: String,
-                displayCode: String
+                destinationName: String,
+                destinationCode: String
             },
             durationInMinutes: String,
             stopCount: Number,
@@ -16,10 +16,11 @@ const schema = mongoose.Schema({
             arrival: String,
             carriers: {
                 marketing: {
-                    name: String
+                    airlineName: String
                 }
-            }
+            },
+            price: String,
+            flightNumber: Number
         }
-
 }, {collection: 'airlines'});
 export default schema;

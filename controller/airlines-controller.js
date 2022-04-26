@@ -10,7 +10,6 @@ const findAllAirlines = async (req, res) => {
 }
 const createAirlines = async (req, res) => {
     const newAirline = req.body;
-
     //newTuit._id = (new Date()).getTime()+'';
     const insertedAirline = await airlinesDao.createAirlines(newAirline);
     res.json(insertedAirline);

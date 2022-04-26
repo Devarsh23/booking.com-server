@@ -10,7 +10,6 @@ const findAllDeals = async (req, res) => {
 }
 const createDeals = async (req, res) => {
     const newDeal = req.body;
-    console.log("Hello 333")
     //newTuit._id = (new Date()).getTime()+'';
     const insertedDeal = await dealsDao.createDeals(newDeal);
     res.json(insertedDeal);
