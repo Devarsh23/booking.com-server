@@ -6,6 +6,9 @@ const schema = mongoose.Schema({
     isAirline : Boolean,
     isUser : Boolean,
     password : String,
-    email:String
+    email:String,
+    dateOfBirth: String,
+    dateJoined: String,
+    location: String
 }, {collection: 'uservalues'});
 export default schema;

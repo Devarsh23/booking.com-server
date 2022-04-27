@@ -7,6 +7,7 @@ import dealsController from "./controller/deals-controller.js";
 import tuitsController from "./controller/tuits-controller.js";
 import airlinesController from "./controller/airlines-controller.js";
 import initialController from "./controller/initial-controller.js";
+import bookingsController from "./controller/bookings-controller.js";
 //const DB_CONNECTION_STRING = "mongodb+srv://devarsh23:hello123@cluster0.pxmhw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
     || 'mongodb://localhost:27017/webdev'
@@ -24,5 +25,6 @@ tuitsController(app);
 dealsController(app);
 airlinesController(app);
 initialController(app);
+bookingsController(app);
 app.listen(process.env.PORT || 4000);
 
